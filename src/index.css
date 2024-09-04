@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --josefin-font: "Josefin Sans", sans-serif;
+  --rubik-font: "Rubik Sans", sans-serif;
+  --goldenish-text-color: #e3c86a;
+
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rubik-font{
+  font-family: var(--rubik-font);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
