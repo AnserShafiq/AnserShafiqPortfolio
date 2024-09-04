@@ -7,9 +7,19 @@
   --josefin-font: "Josefin Sans", sans-serif;
   --rubik-font: "Rubik Sans", sans-serif;
   --goldenish-text-color: #e3c86a;
-
 }
 
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(110, 110, 110);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 50px;
+  background-color: #ceb660;
+}
 
 body {
   margin: 0;
@@ -19,6 +29,9 @@ body {
 
 .rubik-font{
   font-family: var(--rubik-font);
+}
+.josefin-font{
+  font-family: var(--josefin-font);
 }
 
 code {

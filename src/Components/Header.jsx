@@ -1,5 +1,6 @@
 import React from 'react'
 import { BiPhoneCall as Call} from "react-icons/bi";
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -13,14 +14,20 @@ const Header = () => {
         </div>
         <div >
             <nav className='flex flex-row'>
-                <h4 className='lg:text-[1.3vw] tracking-wider uppercase font-[700] mx-4 px-1 text-stone-300 font-[var(--josefin-font)] cursor-pointer transition-transform duration-[1s] ease-in-out hover:font-[800] hover:scale-[1.05] hover:border-b-2 hover: border-[var(--goldenish-text-color)] '>
-                    About
+                <h4  className='lg:text-[1.3vw] tracking-wider uppercase font-[700] mx-4 px-1 text-stone-300 font-[var(--josefin-font)] cursor-pointer transition-transform duration-[1s] ease-in-out hover:font-[800] hover:scale-[1.05] hover:border-b-2 hover: border-[var(--goldenish-text-color)] '>
+                    <HashLink smooth to={'/#projects-section'} >
+                        About
+                    </HashLink>
                 </h4>
                 <h4 className='lg:text-[1.3vw] tracking-wider uppercase font-[700] mx-4 px-1 text-stone-300 font-[var(--josefin-font)] cursor-pointer transition-transform duration-[1s] ease-in-out hover:font-[800] hover:scale-[1.05] hover:border-b-2 hover: border-[var(--goldenish-text-color)] '>
-                    Projects
+                    <HashLink smooth to={'/#projects-section'} >
+                        Projects
+                    </HashLink>
                 </h4>
                 <h4 className='lg:text-[1.3vw] tracking-wider uppercase font-[700] mx-4 px-1 text-stone-300 font-[var(--josefin-font)] cursor-pointer transition-transform duration-[1s] ease-in-out hover:font-[800] hover:scale-[1.05] hover:border-b-2 hover: border-[var(--goldenish-text-color)] '>
-                    Skills
+                    <HashLink smooth to={'/#projects-section'} >
+                        Skills
+                    </HashLink>
                 </h4>
             </nav>
         </div>
