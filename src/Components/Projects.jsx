@@ -47,12 +47,12 @@ const Projects = () => {
 ];
 
   return (
-    <div id='projects-section' className='flex flex-col w-[90%] mx-auto mt-12' >
-        <h2 className='text-[5vw] font-bold tracking-wide leading-[85%] italic text-zinc-900 josefin-font'>Featured<br/>Projects</h2>
-        <div className='grid grid-cols-[48%,48%] gap-[3%] my-[3%]'>
+    <div id='projects-section' className='flex flex-col w-[90%] mx-auto my-12' >
+        <h2 className='text-[4vw] font-bold tracking-wide leading-[85%] italic text-zinc-900 josefin-font'>Featured<br/>Projects</h2>
+        <div className='grid grid-cols-[48%,48%] gap-[3%] my-3'>
             
             {my_projects.map((Project, index)=>
-            <a href={Project.link}>
+            <a key={index} href={Project.link}>
                 <div key={index} className='flex flex-col w-full rounded-[30px] border-2 border-[#0000000a] shadow-md cursor-pointer transition-transform ease-in-out duration-[1s] hover:scale-[1.05]'>
                     <img src={Project.picture} alt={`Web Pick Of ${Project.name}`} className='w-[100%] rounded-t-[30px]'/>
                     <div className='flex flex-row w-full py-6 px-6'>

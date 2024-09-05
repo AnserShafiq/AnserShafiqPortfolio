@@ -27,6 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .rubik-font{
   font-family: var(--rubik-font);
 }
