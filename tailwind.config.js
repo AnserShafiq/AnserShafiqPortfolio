@@ -8,9 +8,19 @@ module.exports = {
       colors:{
         transparent: 'transparent',
         current: 'currentColor',
+        'underline-black':'#000',
         'header-back': '#262626',
+      },
+      height:{
+        'underline-thinkness': '2px',
+      },
+      transitionDuration:{
+        'underline': '1000ms'
       }
+
+
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 } 

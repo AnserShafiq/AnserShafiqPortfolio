@@ -20,7 +20,7 @@ const Projects = () => {
         name: 'RybelX',
         link: 'https://rybelx.com/',
         type: 'Sports Brand',
-        picture: require('../Images/labour.PNG'),
+        picture: require('../Images/rybelx.PNG'),
         date: 'June/2024'
     },
     {

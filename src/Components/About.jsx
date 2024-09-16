@@ -37,7 +37,7 @@ const About = () => {
         className='flex text-center sticky top-[20%] mb-[3%] flex-col'
         style={{ opacity: headingOpacity, transition: 'opacity 0.3s ease-in-out' }}
       >
-        <h2 className='text-[5.5vw] uppercase lg:leading-[85%] font-bold josefin-font'>
+        <h2 className='text-[5.5vw] uppercase lg:leading-[90%] font-bold josefin-font'>
           More About <br /> Anser Shafiq
         </h2>
       </div>
@@ -52,7 +52,7 @@ const About = () => {
       <div className='mb-4% text-center w-[70%] mx-auto'>
         <h2 className='text-[1.4vw] uppercase font-[700] josefin-font'>I am a seasoned software engineer with extensive expertise in web application development, utilizing modern technologies such as React JS, MERN stack, Tailwind CSS, HTML, CSS, JavaScript, WordPress, and Shopify.</h2>
         <h2 className='text-[1.1vw] font-[400] rubik-font mt-2 mb-[5%]'>My experience spans building high-performance, fully responsive, and optimized websites, with a keen focus on crafting intuitive, user-friendly interfaces and scalable architectures. I excel in delivering tailored web solutions that not only meet technical requirements but also enhance the overall user experience and ensure cross-device compatibility, making each project both visually appealing and highly functional.</h2>
-        <div className='w-fit mx-auto text-[1.2vw] bg-stone-800 px-4 pt-3 pb-2 font-bold josefin-font uppercase text-stone-200 rounded-[50px] transition-transform ease-in-out duration-[0.5s] hover:scale-[1.05] cursor-pointer'>
+        <div className='w-fit mx-auto text-[1.2vw] bg-stone-800 px-4 pt-3 pb-2 font-bold josefin-font uppercase text-stone-100 rounded-[50px] transition-transform ease-in-out duration-[0.5s] hover:scale-[1.05] cursor-pointer'>
           <a href={fileURL} download={fileURL} alt='Link to my resume'>My Resume</a>
         </div>
       </div>
