@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import self_img from '../Images/60188.jpg';
+import self_img from '../Images/myPic.jpg';
 
 const About = () => {
   const [headingOpacity, setHeadingOpacity] = useState(1);
