@@ -11,9 +11,9 @@ const Header = () => {
   return (
     <div className='w-full absolute z-[100] flex flex-row justify-between items-center px-[5%] py-[4%] lg:py-[2%] bg-zinc-800 border-b-[1px] border-zinc-900 shadow-sm '>
         <div className='hidden lg:block'>
-            <button className='bg-[var(--goldenish-text-color)] lg:px-4 lg:py-2 lg:text-[1vw] font-[700] rounded-[100px] cursor-pointer  transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] '>
+            <a href={'/contact-schedule'} className='bg-[var(--goldenish-text-color)] lg:px-4 lg:py-2 lg:text-[1vw] font-[700] rounded-[100px] cursor-pointer  transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] '>
                 Schedule A Project
-            </button>
+            </a>
         </div>
         <div className='hidden lg:block'>
             <nav className='flex flex-row'>

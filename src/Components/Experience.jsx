@@ -29,25 +29,25 @@ const Experience = () => {
 
     return (
         <div className='flex flex-col w-[90%] mx-auto py-[4%]'>
-            <div className='flex flex-row mx-auto my-12' >
-            <div className='w-[30%] flex static flex-col top-[30%]'>
-                <h2 className='text-[4vw] sticky top-[10%] font-bold tracking-wide leading-[85%] italic text-zinc-900 josefin-font'>Experience<br/>Roadmap</h2>
+            <div className='flex flex-col lg:flex-row mx-auto my-12' >
+            <div className='w-[100%] lg:w-[30%] flex relative lg:static flex-col top-[30%]'>
+                <h2 className='text-[2.7rem] lg:text-[4vw] relative lg:sticky top-[10%] font-bold tracking-wide leading-none lg:leading-[85%] italic text-zinc-900 josefin-font'>Experience<br/>Roadmap</h2>
             </div>
             
-            <div className='grid w-[70%] grid-cols-1 gap-[2%]'>
+            <div className='flex flex-col mt-[5%] lg:mt-0 lg:grid w-[100%] lg:w-[70%] lg:grid-cols-1 lg:gap-[2%]'>
                 {experience.map((Company, index) =>(
-                    <div key={index} className={`flex flex-col py-5 mx-5 ${Company.last ? '' : 'border-b-[1.25px] border-stone-300'}`}>
-                        <h3 className='text-[1.8vw] font-bold josefin-font'>{Company.name}</h3>
+                    <div key={index} className={`flex flex-col py-5 mx-2 lg:mx-5 ${Company.last ? '' : 'border-b-[1.25px] border-stone-300'}`}>
+                        <h3 className='text-[1.6rem] leading-tight lg:text-[1.8vw] font-bold josefin-font'>{Company.name}</h3>
                         <div className='flex flex-row  '>
                             <div className='flex flex-col ml-[0.25%]'>
 
-                                <h3 className='text-[1.4vw] font-bold'>{Company.position}</h3>
-                                <div className=' text-[1.3vw] font-semibold flex flex-row '>
+                                <h3 className='text-[1.3rem] lg:text-[1.4vw] font-bold'>{Company.position}</h3>
+                                <div className='text-[1rem] lg:text-[1.3vw] font-semibold flex flex-row '>
                                     <h3>{Company.joined}</h3>
                                     <h3 className='mx-1'> - </h3>
                                     <h3>{Company.end}</h3>
                                 </div>
-                                <h3 className='text-[1.3vw] font-normal'>{Company.description}</h3>
+                                <h3 className='text-[1.2rem] lg:text-[1.3vw] font-normal'>{Company.description}</h3>
                             </div>
 
                         </div>
