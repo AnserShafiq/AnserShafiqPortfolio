@@ -1,20 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { GrFormNextLink as NEXT } from "react-icons/gr";
 
-const Projects = () => {
+const ProjectsPage = () => {
     const my_projects = [
         {
-            name: 'Labour Master Solutions',
+            name: 'Labour Master',
             link: 'https://labourmaster.ca/',
             type: 'Recruitment Agency',
-            picture: require('../Images/labour.PNG'),
+            picture: require('./Images/labour.PNG'),
             date: 'Sept 2024',
-            software: 'React JS, Tailwind CSS, Firebase',
+            software: 'React JS, Tailwind CSS, Firebase',  
         },
         {
             name: 'Intellect Workforce',
             link: 'https://intellectworkforce.ca/',
             type: 'Recruitment Agency',
-            picture: require('../Images/intellect.PNG'),
+            picture: require('./Images/intellect.PNG'),
             date: 'Aug 2024',
             software: 'React JS, Firebase, CSS',
         },
@@ -22,28 +23,52 @@ const Projects = () => {
             name: 'RybelX',
             link: 'https://rybelx.com/',
             type: 'Sports Brand',
-            picture: require('../Images/rybelx.PNG'),
+            picture: require('./Images/rybelx.PNG'),
             date: 'June 2024',
             software: 'WordPress, WooCommerce',
+            
         },
         {
             name: 'TM Staffing Services',
             link: 'https://tmstaffing.ca/',
             type: 'Recruitment Agency',
-            picture: require('../Images/tm.PNG'),
+            picture: require('./Images/tm.PNG'),
             date: 'Feb 2024',
             software: 'React JS, Firebase, CSS',
+        },
+        {
+            name: 'Perfect HR',
+            link: 'https://perfecthr.ca/',
+            type: 'Recruitment Agency',
+            picture: require('./Images/perfect.PNG'),
+            date: 'Jan 2024',
+            software: 'WordPress',
+        },
+        {
+            name: 'God Speed MBS',
+            link: 'https://godspeedmbs.com/',
+            type: 'Medical Billings',
+            picture: require('./Images/godspeed.PNG'),
+            date: 'Jan 2024',
+            software: 'WordPress',
         },
     ];
 
     return (
-        <div id='projects-section' className='flex flex-col w-[90%] mx-auto mt-12 mb-14 lg:mb-8'>
-            <h2 className='text-[2.7rem] lg:text-[4vw] font-bold tracking-wide leading-none lg:leading-[85%] italic text-zinc-900 josefin-font'>
-                Featured<br className=''/> Projects
+        <>
+        <div className='flex flex-row items-end w-[90%] mx-auto pt-[8vh] lg:pt-[15vh]'>
+            <a className='text-[0.8rem] underline mr-1 text-stone-600 cursor-pointer transition ease-in-out duration-[0.5s] hover:scale-[1.1] hover:text-red-600' href='/'>Home</a>
+            <NEXT />
+            <a className='text-[0.8rem] underline ml-1 text-stone-600 cursor-pointer transition ease-in-out duration-[0.5s] hover:scale-[1.1] hover:text-red-600' href='/my-projects'>Projects</a>
+        </div>
+        
+        <div id='projects-section' className='flex flex-col w-[90%] mx-auto mb-14 lg:mb-8 pt-[5%] lg:pt-[2.5%] pb-[4%]'>
+            <h2 className='font-extrabold text-zinc-800 text-[2.2rem] lg:text-[2.8rem] lg:text-[3rem] uppercase leading-none text-center tracking-wider font-[var(--josefin-font)]'>
+                All Projects Done By Me
             </h2>
 
-            <div className='flex lg:grid flex-col lg:grid-cols-[48%,48%] lg:gap-[3%] my-3 pb-[7%] lg:pb-[3%]'>
-                {my_projects
+            <div className='flex lg:grid flex-col lg:grid-cols-[30%,30%,30%] lg:gap-[3%] mt-8 pb-[7%] lg:pb-[3%]'>
+                {my_projects 
                     .map((Project, index) => (
                         <a className='my-[1rem] lg:my-0' key={index} href={Project.link}>
                             <div className='flex flex-col w-full rounded-[30px] border-2 border-[#0000000a] shadow-md cursor-pointer transition-transform ease-in-out duration-[1s] hover:scale-[1.05]'>
@@ -66,11 +91,14 @@ const Projects = () => {
                         </a>
                     ))}
             </div>
-            <a href='/my-projects' className=' w-fit mt-0 lg:mt-[4%] mx-auto px-6 pt-[3%] lg:pt-[1.2%] pb-[1%] lg:pb-[0.75%] bg-stone-800 leading-none tracking-wider text-[1.8rem] lg:text-[1.5vw] text-[var(--goldenish-text-color)] font-semibold josefin-font rounded-[50px] hover:bg-[var(--goldenish-text-color)] hover:text-stone-800 transition duration-300'>
-                View All Projects
+            <a className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-6 pt-[1.25%] pb-[0.75%] text-[1.3rem] josefin-font font-bold capitalize w-fit mx-auto mt-5 transition ease-in-out duration-[0.5s] hover:scale-[1.1]' href='/contact-schedule'>
+                Let's Develop Together
             </a>
-        </div>
-    );
-};
 
-export default Projects;
+        </div>
+
+        </>
+    );
+}
+
+export default ProjectsPage
