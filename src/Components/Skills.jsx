@@ -2,7 +2,7 @@ import React from 'react'
 
 import React_logo from '../Images/react.png';
 import Tailwind_logo from '../Images/tailwind.png';
-import MERN from '../Images/mern.png';
+import MERN from '../Images/MERN.png';
 import JS from '../Images/js.png'
 import CSS from '../Images/css.png'
 import HTML from '../Images/html.png'
