@@ -1,5 +1,5 @@
 import React from 'react';
-import self_img from '../Images/60188.jpg';
+import self_img from '../Images/myPic.jpg';
 import { FaArrowRight as Arrow} from "react-icons/fa6";
 import '../index.css'
 
