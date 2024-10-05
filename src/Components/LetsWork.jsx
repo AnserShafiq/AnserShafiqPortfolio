@@ -35,8 +35,8 @@ const About = () => {
             <a className='mx-3 inline-flex items-center text-[1.1rem] lg:text-[1.1vw] p-0 uppercase josefin-font font-bold transitive-underline' href='https://www.linkedin.com/in/rao-ansar-shafiq/'>
                 LinkedIn <Arrow className='rotate-[-45deg] text-[1.rem] lg:text-[1.2vw] mb-1 ml-1'/>
             </a>
-            <a className='mx-3 inline-flex items-center text-[1.1rem] lg:text-[1.1vw] p-0 uppercase josefin-font font-bold transitive-underline' href='https://www.instagram.com/anser_shafiq/'>
-                Instagram <Arrow className='rotate-[-45deg] text-[1.rem] lg:text-[1.2vw] mb-1 ml-1'/>
+            <a className='mx-3 inline-flex items-center text-[1.1rem] lg:text-[1.1vw] p-0 uppercase josefin-font font-bold transitive-underline' href='https://github.com/AnserShafiq'>
+                Github <Arrow className='rotate-[-45deg] text-[1.rem] lg:text-[1.2vw] mb-1 ml-1'/>
             </a>
         </div>
       </div>
