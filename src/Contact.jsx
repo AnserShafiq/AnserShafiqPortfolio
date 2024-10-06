@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { GrFormNextLink as NEXT } from "react-icons/gr";
+import emailjs from 'emailjs-com';
 
+emailjs.init('VNj6ttqgEF4WjPoh6');
 
 const Contact = () => {
   const [messageBody, setMessage] = useState({
@@ -231,7 +233,33 @@ const Contact = () => {
 
   const handleSubmission = (e) =>{
     e.preventDefault();
-    console.log(messageBody)
+    const DataToSend = {
+      firstName: messageBody.firstName,
+      lastName: messageBody.lastName,
+      companyName: messageBody.companyName,
+      email: messageBody.email,
+      countryCode: messageBody.countryCode,
+      contactNumber: messageBody.contactNumber,
+      location: messageBody.location,
+      reason: messageBody.reason,
+      details: messageBody.details,
+    }
+    console.log(messageBody);
+    emailjs.send('service_wiss6ei', 'form-01', DataToSend, 'VNj6ttqgEF4WjPoh6')
+      .then( (response) =>{
+          console.log('Sucessfully Sent!!x1', response.status, response.text);
+      },(error) => {
+         console.log('Error => ', error);
+      }
+      ).catch((e) => console.log(e))
+
+      emailjs.send('service_wiss6ei', 'form-02', DataToSend, 'VNj6ttqgEF4WjPoh6')
+      .then( (response) =>{
+          console.log('Sucessfully Sent!!x2', response.status, response.text);
+      },(error) => {
+         console.log('Error => ', error);
+      }
+      ).catch((e) => console.log(e))
 
   }
 
