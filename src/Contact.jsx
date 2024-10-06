@@ -293,7 +293,7 @@ const Contact = () => {
             <option key={index} value={Country.code}> {Country.code} - {Country.name}</option>
           )}
         </select>
-        <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem] w-[77%]' type='tel' name='contactNumber' value={messageBody.contactNumber} onChange={handleChange} required/>
+        <input placeholder='(000) 000 - 0000' className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem] w-[77%]' type='tel' name='contactNumber' value={messageBody.contactNumber} onChange={handleChange} required/>
         </div>
 
         <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Address</label>
