@@ -69,9 +69,9 @@ const Header = () => {
                     </HashLink>
                 </h4>
             </nav>
-            <button className='bg-[var(--goldenish-text-color)] text-[1.6rem] p-1 font-[600] rounded-[10px] uppercase cursor-pointer transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] '>
+            <a href='/contact-schedule' className='bg-[var(--goldenish-text-color)] text-[1.6rem] p-1 font-[600] rounded-[10px] uppercase cursor-pointer transition-transform duration-[0.5s] ease-in-out hover:scale-[1.05] '>
                 Schedule A Project
-            </button>
+            </a>
         </div>
     </div>
   )
