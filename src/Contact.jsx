@@ -231,7 +231,7 @@ const Contact = () => {
   }
   }
 
-  const handleSubmission = (e) =>{
+  const handleSubmission = async(e) =>{
     e.preventDefault();
     const DataToSend = {
       firstName: messageBody.firstName,
@@ -245,7 +245,7 @@ const Contact = () => {
       details: messageBody.details,
     }
     console.log(messageBody);
-    emailjs.send('service_wiss6ei', 'form-01', DataToSend, 'VNj6ttqgEF4WjPoh6')
+    await emailjs.send('service_wiss6ei', 'form-01', DataToSend, 'VNj6ttqgEF4WjPoh6')
       .then( (response) =>{
           console.log('Sucessfully Sent!!x1', response.status, response.text);
       },(error) => {
@@ -253,14 +253,14 @@ const Contact = () => {
       }
       ).catch((e) => console.log(e))
 
-      emailjs.send('service_wiss6ei', 'form-02', DataToSend, 'VNj6ttqgEF4WjPoh6')
+      await emailjs.send('service_wiss6ei', 'form-02', DataToSend, 'VNj6ttqgEF4WjPoh6')
       .then( (response) =>{
           console.log('Sucessfully Sent!!x2', response.status, response.text);
       },(error) => {
          console.log('Error => ', error);
       }
       ).catch((e) => console.log(e))
-
+      window.location.reload();
   }
 
   return (
