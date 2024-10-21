@@ -1,5 +1,5 @@
 import React from 'react';
-import self_img from '../Images/myPic.jpg';
+import self_img from '../Images/myPic2.jpg';
 import { FaArrowRight as Arrow} from "react-icons/fa6";
 import '../index.css'
 
@@ -22,7 +22,7 @@ const About = () => {
         <img
           id='about-image'
           src={self_img}
-          className='w-[70vw] lg:w-[24vw] h-[45vh] lg:h-[70vh] object-cover rounded-[200px] shadow-2xl shadow-stone-300'
+          className='w-[70vw] lg:w-[24vw] h-[45vh] lg:h-[70vh] object-cover rounded-[200px] shadow-md shadow-stone-500'
           alt='Anser Shafiq'
         />
       </div>
