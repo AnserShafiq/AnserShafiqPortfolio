@@ -4,6 +4,14 @@ import { GrFormNextLink as NEXT } from "react-icons/gr";
 const ProjectsPage = () => {
     const my_projects = [
         {
+            name: 'Global HR',
+            link: 'https://globalhr.vercel.app/',
+            type: 'Canadian Agency',
+            picture: require('./Images/globalhr.png'),
+            date: 'Nov 2024',
+            software: 'React JS, Tailwind CSS',  
+        },
+        {
             name: 'Labour Master',
             link: 'https://labourmaster.ca/',
             type: 'Recruitment Agency',
