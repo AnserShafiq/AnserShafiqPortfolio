@@ -3,11 +3,11 @@ import React from 'react';
 const Projects = () => {
     const my_projects = [
         {
-            name: 'Labour Master Solutions',
-            link: 'https://labourmaster.ca/',
+            name: 'Talent Avenue',
+            link: 'https://talentavenue.netlify.app/',
             type: 'Recruitment Agency',
-            picture: require('../Images/labour.PNG'),
-            date: 'Sept 2024',
+            picture: require('../Images/talentavenue.png'),
+            date: 'December 2024',
             software: 'React JS, Tailwind CSS, Firebase',
         },
         {
