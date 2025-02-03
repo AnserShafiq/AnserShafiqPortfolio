@@ -5,7 +5,7 @@ const Experience = () => {
     const experience = [
         {
             name: 'North American Staffing Services',
-            position: 'Website Developer',
+            position: 'Full Stack Web Developer',
             description:'Demonstrated expertise in designing and developing websites by leveraging various modern technologies to deliver optimized and responsive digital solutions.',
             joined: '2024',
             end: 'Present',
