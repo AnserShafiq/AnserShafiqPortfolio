@@ -5,6 +5,7 @@ import Home from './Home'
 import Footer from './Components/Footer'
 import Contact from './Contact'
 import ProjectsPage from './ProjectsPage'
+import JumpToTop from './Components/JumpToTop'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/contact-schedule' element={<Contact />} />
         <Route path='/my-projects' element={<ProjectsPage />} />
       </Routes>
+      <JumpToTop />
       <Footer />
     </Router>
     </>
