@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GrFormNextLink as NEXT } from "react-icons/gr";
 import emailjs from 'emailjs-com';
+import Loading from './Loading';
 
 emailjs.init('VNj6ttqgEF4WjPoh6');
 
 const Contact = () => {
+    const [isLoading, setIsLoading] = useState(true);
+  
   const [messageBody, setMessage] = useState({
     firstName: '',
     lastName: '',
@@ -230,6 +233,16 @@ const Contact = () => {
     }))
   }
   }
+  
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // 4 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) return <Loading />;
 
   const handleSubmission = async(e) =>{
     e.preventDefault();
@@ -265,27 +278,27 @@ const Contact = () => {
 
   return (
     <>
-    <div className='flex flex-row items-end w-[90%] mx-auto pt-[8vh] lg:pt-[15vh]'>
+    <div className='flex flex-row items-end w-[90%] lg:w-[85vw] 2xl:w-[80vw] mx-auto pt-[8vh] lg:pt-[15vh]'>
       <a className='text-[0.8rem] underline mr-1 text-stone-600 cursor-pointer transition ease-in-out duration-[0.5s] hover:scale-[1.1] hover:text-red-600' href='/'>Home</a>
         <NEXT />
       <a className='text-[0.8rem] underline ml-1 text-stone-600 cursor-pointer transition ease-in-out duration-[0.5s] hover:scale-[1.1] hover:text-red-600' href='/contact-schedule'>Contact</a>
     </div>
     <div className='flex flex-col w-[90%] lg:w-[60%] mx-auto '>
       <div className='flex flex-col items-center pt-[5%] lg:pt-[2.5%] pb-[4%] w-[100%] '>
-      <h2 className=' font-extrabold text-zinc-800 text-[2.2rem] lg:text-[2.8rem] lg:text-[3rem] uppercase leading-none text-center tracking-wider font-[var(--josefin-font)]'>Let's discuss your project</h2>
-      <h2 className=' font-[500] text-zinc-800 text-[1.3rem] capitalize mt-4 leading-tight text-center tracking-normal font-[var(--josefin-font)]'>My focus is on grasping your requirements and delivering a solution specifically designed to achieve your goals.</h2>
+      <h2 className=' font-extrabold text-zinc-800 text-3xl lg:text-4xl capitalize leading-none text-center tracking-wider font-[var(--josefin-font)]'>Let's discuss your project</h2>
+      <h2 className=' font-[500] text-zinc-800 text-xl capitalize mt-4 leading-tight text-center tracking-normal font-[var(--josefin-font)]'>My focus is on grasping your requirements and delivering a solution specifically designed to achieve your goals.</h2>
       <h2 className=' font-[500] text-zinc-800 text-[1.1rem] lg:text-[1rem] capitalize mt-6 leading-tight text-center tracking-normal font-[var(--josefin-font)]'>Please provide your information, and I'll get in touch to schedule a time to meet.</h2>
       <form className='flex flex-col w-[100%] lg:w-[60%] p-3 josefin-font' onSubmit={handleSubmission}>
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-2'>First Name</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-2'>First Name</label>
         <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' type='text' name='firstName' value={messageBody.firstName} onChange={handleChange} required/>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Last Name</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Last Name</label>
         <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' type='text' name='lastName' value={messageBody.lastName} onChange={handleChange} required/>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Email</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Email</label>
         <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' type='email' name='email' value={messageBody.email} onChange={handleChange} required/>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Contact Number</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Contact Number</label>
         <div className='flex flex-row justify-between p-0'>
         <select className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-1 lg:px-3 py-2 text-[1rem] w-[21%] lg:w-[20%]' name='countryCode' value={messageBody.countryCode} onChange={handleChange} required>
           <option value={''}>+000</option>
@@ -296,13 +309,13 @@ const Contact = () => {
         <input placeholder='(000) 000 - 0000' className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem] w-[77%]' type='tel' name='contactNumber' value={messageBody.contactNumber} onChange={handleChange} required/>
         </div>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Address</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Address</label>
         <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' type='text' name='location' value={messageBody.location} onChange={handleChange} required/>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Company Name</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Company Name</label>
         <input className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' type='text' name='companyName' value={messageBody.companyName} onChange={handleChange} required/>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Contact Reason</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Contact Reason</label>
         <select className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-3 py-2 text-[1rem]' name='reason' value={messageBody.reason} onChange={handleChange} required>
           <option value={''}>Select a reason </option>
           <option value={'Web Development'}>Web Development </option>
@@ -311,10 +324,10 @@ const Contact = () => {
           <option value={'other'}>Other </option>
         </select>
 
-        <label className='text-[1.1rem] font-bold uppercase tracking-normal leading-none mt-5'>Details</label>
+        <label className='text-[1.1rem] font-bold mb-1 tracking-normal leading-none mt-5'>Details</label>
         <textarea className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 py-2 text-[1rem]' rows={3} name='details' value={messageBody.details} onChange={handleChange} required/>
 
-        <button className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 pt-[1.25%] pb-[0.75%] text-[1.2rem] font-semibold uppercase w-fit mx-auto mt-5 transition ease-in-out duration-[0.5s] hover:scale-[1.1]' type='submit'>Submit</button>
+        <button className='border-1 border-stone-400 rounded-[15px] bg-stone-200 px-4 pt-[1.25%] pb-[0.75%] text-[1.2rem] font-semibold mb-1 w-fit mx-auto mt-5 transition ease-in-out duration-[0.5s] hover:scale-[1.1]' type='submit'>Submit</button>
       </form>
       </div>
     </div>
