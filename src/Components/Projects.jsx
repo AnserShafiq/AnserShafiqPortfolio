@@ -30,20 +30,20 @@ const Projects = () => {
     ];
 
     return (
-        <div id='projects-section' className='flex flex-col items-center w-[90%] lg:w-[85vw] 2xl:w-[80vw] mx-auto mt-12 lg:mt-20 mb-14 lg:mb-8'>
+        <div id='projects-section' className='flex flex-col lg:items-center w-[90%] lg:w-[85vw] 2xl:w-[80vw] mx-auto mt-12 lg:mt-20 mb-14 lg:mb-8'>
             <h2 className='text-[2rem] lg:text-[3.4vw] font-bold tracking-wide leading-none lg:leading-[85%] italic text-zinc-900 josefin-font'>
-                Featured Projects
+                Featured<br className='block lg:hidden'/> Projects
             </h2>
 
             <div className='flex lg:grid flex-col lg:grid-cols-[30%,30%,30%] content-between place-content-center lg:gap-[3%] my-3 lg:my-6 pb-[7%] lg:pb-[3%]'>
                 {my_projects
                     .map((Project, index) => (
                         <a className='my-[1rem] lg:my-0 lg:mt-4' key={index} href={Project.link}>
-                            <div className='flex flex-col w-full rounded-[30px] border-2 border-[#0000000a] shadow-md shadow-gray-400 cursor-pointer transition-transform ease-in-out duration-[1s] hover:scale-[1.05]'>
+                            <div className='flex flex-col w-[90%] mx-auto lg:w-full rounded-[30px] border-2 border-[#0000000a] shadow-md shadow-gray-400 cursor-pointer transition-transform ease-in-out duration-[1s] hover:scale-[1.05]'>
                                 <img
                                     src={Project.picture}
                                     alt={`Web Pick Of ${Project.name}`}
-                                    className='w-[100%] h-[28vh] object-fit object-left lg:h-auto rounded-t-[30px]'
+                                    className='w-[100%] h-[20vh] lg:h-[28vh] object-fit object-center lg:h-auto rounded-t-[30px]'
                                 />
                                 <div className='flex flex-col lg:flex-row w-full py-6 px-6'>
                                     <div className='w-[100%] flex flex-col items-center lg:items-start'>
@@ -64,7 +64,7 @@ const Projects = () => {
                         </a>
                     ))}
             </div>
-            <a href='/my-projects' className=' w-fit mt-0 lg:mt-5 mx-auto px-6 pt-[3%] lg:pt-[1.2%] pb-[1%] lg:pb-[0.75%] bg-stone-800 leading-none tracking-wider text-lg lg:text-2xl text-[var(--goldenish-text-color)] font-semibold josefin-font rounded-[50px] hover:bg-[var(--goldenish-text-color)] hover:text-stone-800 transition duration-300'>
+            <a href='/my-projects' className='w-fit mt-0 lg:mt-5 mx-auto px-3 py-2 lg:px-6 lg:pt-[1.2%] lg:pb-[0.75%] bg-stone-800 leading-normal tracking-wider text-xl lg:text-2xl text-[var(--goldenish-text-color)] font-semibold josefin-font rounded-[50px] hover:bg-[var(--goldenish-text-color)] hover:text-stone-800 transition duration-300'>
                 View All Projects
             </a>
         </div>

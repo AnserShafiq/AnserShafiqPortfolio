@@ -15,7 +15,7 @@ import SHOPIFY from '../Images/shopify.png'
 const Skills = () => {
     return (
         <div className='flex flex-col w-[90%] lg:w-[85vw] 2xl:w-[80vw] mx-auto pt-[4%]' id='my-skills'>
-            <div className='flex flex-col lg:flex-row mx-auto my-12' >
+            <div className='flex flex-col lg:flex-row mx-auto my-6 lg:my-12' >
                 <div className='w-[100%] lg:w-[30%] flex relative lg:static flex-col top-[30%]'>
                     <h2 className='text-[2rem] lg:text-[3.2vw] relative lg:sticky top-[10%] font-bold tracking-wide leading-none lg:leading-[85%] italic text-zinc-900 josefin-font'>Technical <br/>Expertise</h2>
                 </div>
