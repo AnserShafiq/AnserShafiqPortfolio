@@ -18,7 +18,7 @@ const Name = () => {
                   Let's get linked for projects
             </h4>
             <h2 className=' font-extrabold text-[var(--goldenish-text-color)] italic text-[2.8rem] lg:text-[5.5vw] uppercase leading-[75%] tracking-wider font-[var(--josefin-font)]'>Anser Shafiq</h2>
-            <h4 className='text-lg lg:text-2xl tracking-wide font-[500] mt-4 lg:mx-[25%] uppercase text-stone-200 italic' >Software Developer - React JS, MERN, Tailwind CSS,<br className='hidden lg:block'/> WordPress, Shopify, and many more.  </h4>
+            <h4 className='text-lg lg:text-2xl tracking-wide font-[500] mt-4 lg:mx-[25%] uppercase text-stone-200 italic' >Software Developer - React JS, Next JS, Vite JS, MERN, TypeScript and many more.  </h4>
             </div>
         </div>
     </div>

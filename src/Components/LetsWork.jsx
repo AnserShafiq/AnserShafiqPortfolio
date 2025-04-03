@@ -26,8 +26,8 @@ const About = () => {
           alt='Anser Shafiq'
         />
       </div>
-      <div className='mb-4% text-center w-[94%] lg:w-[70%] mx-auto'>
-        <h2 className='text-xl lg:text-2xl font-[500] josefin-font'>I am a skilled Full Stack Developer with expertise in creating dynamic,<br className='hidden lg:block'/> responsive websites. My passion for efficient code, seamless user experiences, and<br className='hidden lg:block'/> cutting-edge technologies is reflected in the solutions I build.</h2>        
+      <div className='mb-4% text-center w-[94%] lg:w-[850px] mx-auto'>
+        <h2 className='text-xl lg:text-2xl font-[500] josefin-font'>I am a skilled Full Stack Developer with expertise in creating dynamic, responsive websites. My passion for efficient code, seamless user experiences, and cutting-edge technologies is reflected in the solutions I build.</h2>        
         <div className='flex flex-row my-4 justify-center transition'>
             <a className='mx-3 inline-flex items-center text-[1.1rem] lg:text-[1.1vw] p-0 uppercase josefin-font font-bold transitive-underline' href='mailto:ansershafiq@gmail.com'>
                 Gmail <Arrow className='rotate-[-45deg] text-[1.rem] lg:text-[1.2vw] mb-1 ml-1'/>
