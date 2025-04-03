@@ -7,6 +7,7 @@ import Contact from './Contact'
 import ProjectsPage from './ProjectsPage'
 import JumpToTop from './Components/JumpToTop'
 
+
 const App = () => {
   return (
     <>
